@@ -1,15 +1,27 @@
 [tool.poetry]
 name = "demoauth"
 version = "0.1.0"
-description = ""
-authors = ["Головкина Устинья Дмитриевна"]
+description = "Пример авторизации на FastApi."
+authors = ["justyfay"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
+setuptools = "^69.0.3"
 python = "^3.11"
 fastapi = "^0.104.1"
 uvicorn = "^0.24.0.post1"
+gunicorn = "^21.2.0"
+loguru = "^0.7.2"
+uvloop = "^0.19.0"
+httptools = "^0.6.1"
+sqlalchemy = "^2.0.29"
+aiosqlite = "^0.20.0"
+python-dotenv = "^1.0.1"
+greenlet = "^3.0.3"
 
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^69.5.1"
 
 [build-system]
 requires = ["poetry-core"]
