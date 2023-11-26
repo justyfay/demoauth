@@ -5,7 +5,7 @@ import json
 
 from typing import Optional
 from fastapi import FastAPI, Cookie, Body
-from fastapi.responses import Response
+from starlette.responses import Response
 
 app = FastAPI()
 
@@ -62,7 +62,7 @@ def index_page(username: Optional[str] = Cookie(default=None)) -> Response:
         response.delete_cookie(key="username")
         return response
     try:
-        user = users[valid_username]
+        users[valid_username]
     except KeyError:
         response = Response(login_page, media_type="text/html")
         response.delete_cookie(key="username")
